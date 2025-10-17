@@ -49,26 +49,9 @@
       transition: transform 0.3s ease;
     }
     .lumi img:hover {
-      transform: scale(1.05) rotate(-2deg);
+      transform: scale(1.05) rotate(-7deg);
     }
-    .eye-blink {
-      position: absolute;
-      top: 70px;
-      left: 70px;
-      width: 40px;
-      height: 15px;
-      background: var(--bg);
-      border-radius: 50%;
-      animation: blink 6s infinite;
-      z-index: 2;
-    }
-    .eye-blink.right {
-      left: 130px;
-    }
-    @keyframes blink {
-      0%, 90%, 100% { transform: scaleY(0); }
-      92%, 98% { transform: scaleY(1); }
-    }
+    
     h1 {
       margin-top: 20px;
       font-size: 1.8rem;
@@ -99,14 +82,13 @@
   <main>
     <div class="lumi">
       <img src="/assets/img/lumi-chibi-casco.png" alt="Lumi chibi ingeniera" />
-      <div class="eye-blink"></div>
-      <div class="eye-blink right"></div>
     </div>
     <h1>¡Hola, soy Lumi Chibi Ingeniera!</h1>
     <p>
       Te doy la bienvenida al lado informal del portafolio de Osito 🐻. Aquí vas a encontrar proyectos locos,
       scripts mágicos, memes tech y cositas para divertirse aprendiendo.
     </p>
+    
     <div class="buttons">
       <a href="/" class="btn">← Volver al inicio</a>
       <a href="#" class="btn">🧠 Script rápido</a>
