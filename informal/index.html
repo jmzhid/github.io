@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zona Informal · Lumi Chibi Ingeniera</title>
+  <link rel="icon" href="/assets/favicon.png" />
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --accent: #64d2ff;
+      --accent2: #b392f0;
+      --muted: #7e8ba3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #e8eefc;
+      font-family: 'Segoe UI', Roboto, system-ui;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 16px 24px;
+      text-align: center;
+      font-weight: bold;
+      background: rgba(100, 210, 255, 0.05);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 60px);
+      padding: 20px;
+      text-align: center;
+    }
+    .lumi {
+      position: relative;
+      width: 240px;
+      height: 240px;
+    }
+    .lumi img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .lumi img:hover {
+      transform: scale(1.05) rotate(-2deg);
+    }
+    .eye-blink {
+      position: absolute;
+      top: 70px;
+      left: 70px;
+      width: 40px;
+      height: 15px;
+      background: var(--bg);
+      border-radius: 50%;
+      animation: blink 6s infinite;
+      z-index: 2;
+    }
+    .eye-blink.right {
+      left: 130px;
+    }
+    @keyframes blink {
+      0%, 90%, 100% { transform: scaleY(0); }
+      92%, 98% { transform: scaleY(1); }
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+    p { color: var(--muted); max-width: 500px; }
+    .buttons { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    a.btn {
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(100,210,255,.15), rgba(179,146,240,.15));
+      border: 1px solid rgba(255,255,255,.12);
+      color: #e8eefc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    a.btn:hover {
+      background: linear-gradient(135deg, rgba(100,210,255,.25), rgba(179,146,240,.25));
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Zona Informal · con Lumi Chibi Ingeniera 👷‍♀️
+  </header>
+  <main>
+    <div class="lumi">
+      <img src="/assets/img/lumi-chibi-casco.png" alt="Lumi chibi ingeniera" />
+      <div class="eye-blink"></div>
+      <div class="eye-blink right"></div>
+    </div>
+    <h1>¡Hola, soy Lumi Chibi Ingeniera!</h1>
+    <p>
+      Te doy la bienvenida al lado informal del portafolio de Osito 🐻. Aquí vas a encontrar proyectos locos,
+      scripts mágicos, memes tech y cositas para divertirse aprendiendo.
+    </p>
+    <div class="buttons">
+      <a href="/" class="btn">← Volver al inicio</a>
+      <a href="#" class="btn">🧠 Script rápido</a>
+      <a href="#" class="btn">💾 Proyecto curioso</a>
+    </div>
+  </main>
+</body>
+</html>
